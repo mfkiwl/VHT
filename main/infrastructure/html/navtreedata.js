@@ -43,21 +43,37 @@ var NAVTREE =
     ] ],
     [ "Run AMI with GitHub Actions", "run_ami_github.html", [
       [ "Self-hosted GitHub Runners", "run_ami_github.html#self_hosted", [
-        [ "Setup AWS EC2 Instance", "run_ami_github.html#setup_AWS", null ],
-        [ "Add GitHub Secrets", "run_ami_github.html#add_secrets", null ],
-        [ "Add GitHub Action", "run_ami_github.html#add_action", null ],
-        [ "Test GitHub Action", "run_ami_github.html#autotoc_md8", null ]
+        [ "Setup Github", "run_ami_github.html#self-hosted1", null ],
+        [ "Setup AWS EC2 Instance", "run_ami_github.html#self-hosted2", null ],
+        [ "Add GitHub Action", "run_ami_github.html#self_hosted3", null ]
       ] ],
       [ "GitHub-hosted Runners", "run_ami_github.html#GitHub_hosted", [
-        [ "AWS Account Setup", "run_ami_github.html#autotoc_md9", [
-          [ "Create PassRole policy for VHT-AMI", "run_ami_github.html#autotoc_md10", null ],
-          [ "Create Identity and Access Management (IAM) User", "run_ami_github.html#autotoc_md11", null ],
-          [ "Create an IAM Role For EC2 Services", "run_ami_github.html#autotoc_md12", null ]
-        ] ],
-        [ "Usage", "run_ami_github.html#autotoc_md13", null ]
+        [ "Create user roles on AWS IAM", "run_ami_github.html#github_hosted1", null ],
+        [ "Setup AWS EC2 Instance", "run_ami_github.html#github_hosted2", null ],
+        [ "Setup AWS S3 Instance", "run_ami_github.html#github_hosted3", null ],
+        [ "Add Github Secrets", "run_ami_github.html#github_hosted4", null ],
+        [ "Add Github Action", "run_ami_github.html#github_hosted5", [
+          [ "Prepare the testsuite", "run_ami_github.html#autotoc_md8", null ],
+          [ "The vht.yml", "run_ami_github.html#autotoc_md9", null ],
+          [ "Example", "run_ami_github.html#autotoc_md10", null ],
+          [ "Use Action", "run_ami_github.html#autotoc_md11", null ]
+        ] ]
       ] ]
     ] ],
-    [ "Run with MDK-Professional", "run_mdk_pro.html", null ],
+    [ "Debug with Arm Development Studio", "debug_ds.html", [
+      [ "Tools Installation and set up", "debug_ds.html#ds_setup", null ],
+      [ "Start Virtual Hardware Target", "debug_ds.html#ds_vht_start", null ],
+      [ "Connect to Target in Arm DS", "debug_ds.html#ds_connect", null ]
+    ] ],
+    [ "Run with MDK-Professional", "run_mdk_pro.html", [
+      [ "Tools Installation", "run_mdk_pro.html#mdk_vht_install", null ],
+      [ "Project Configuration", "run_mdk_pro.html#mdk_project_config", [
+        [ "Target selection", "run_mdk_pro.html#mdk_vht_targets", null ],
+        [ "VHT run and debug configuration", "run_mdk_pro.html#mdk_vht_debug", null ]
+      ] ],
+      [ "Project Export", "run_mdk_pro.html#mdk_cprj_export", null ],
+      [ "Program Build and Debug", "run_mdk_pro.html#mdk_program_run", null ]
+    ] ],
     [ "VHT CLI Script", "md_src_vht_doc.html", [
       [ "Requirements", "md_src_vht_doc.html#autotoc_md2", null ],
       [ "Usage", "md_src_vht_doc.html#autotoc_md3", null ],
@@ -72,7 +88,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"index.html"
+"debug_ds.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

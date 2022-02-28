@@ -1,11 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- HTML header for doxygen 1.9.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Introduction</title>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Overview: Introduction</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="extra_stylesheet.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
@@ -22,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
+<link href="$extra_stylesheet" rel="stylesheet" type="text/css" />
+<link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -29,13 +32,14 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 55px;">
-  <td style="padding: 1em;"id="projectlogo"><img alt="Logo" src="arm.png"/></td>
+  <td id="projectlogo" style="padding: 1em;"><img alt="Logo" src="arm.png"/></td>
   <td style="padding-left: 2em; padding-bottom: 1em;padding-top: 1em;">
    <div id="projectname">Virtual Hardware
    &#160;<span id="projectnumber">Version 0.2 - beta</span>
    </div>
    <div id="projectbrief">Product Overview</div>
   </td>
+  <!--END !PROJECT_NAME-->
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.svg"
@@ -144,7 +148,7 @@ Test without Hardware</h2>
 <h2><a class="anchor" id="Verify"></a>
 Verify Correctness</h2>
 <p ><b>Arm Virtual Hardware Targets</b> are based on Arm simulation models that are validated with the same process as the IP. Specially it allows you to:</p><ul>
-<li>Algorithm testing with identical logical behaviour of the target device</li>
+<li>Perform algorithm testing with identical logical behaviour of the target device</li>
 <li>Precisely repeat complex input patterns in CI/CD test environments</li>
 <li>Analyse software behaviour with event annotations</li>
 </ul>
@@ -170,20 +174,29 @@ Comparison of test efforts in CI and no CI workflows</div></div>
 <li><b>Maintenance</b> – unlike physical hardware, virtual platforms do not overheat, wear out from overuse, break from misuse, or use physical space and resources.</li>
 <li><b>Upgrades</b> – virtual platforms can be adapted and re-configured to match corresponding changes to the underlying hardware platform that is under development. These types of changes can be costly or impossible with physical hardware.</li>
 </ul>
+<h1><a class="anchor" id="History"></a>
+Release History</h1>
+<table class="doxtable">
+<tr>
+<th>Version </th><th>Changes  </th></tr>
+<tr>
+<td>0.2-beta (Feb 2022) </td><td>Added features:<ul>
+<li><a href="../../simulation/html/Using.html"><b>Extended Target support</b></a>: additional Cortex-M processors are supported: Cortex-M0/M0+/M3/M4/M7/M23/M33.</li>
+<li><a href="../../infrastructure/html/run_mdk_pro.html"><b>Support in MDK-Professional</b></a>: enables desktop development in classic tooling.</li>
+<li><a href="../../simulation/html/group__arm__vio.html"><b>VIO Interface</b></a>: simple interface to control I/O such as switches and LEDs via Python scripts.</li>
+<li><a href="../../simulation/html/group__arm__vsocket.html"><b>VSocket Interface</b></a>: BSD socket interface that connects the application under test to networks, including public Internet.</li>
+<li><a href="../../examples/html/GetStarted.html"><b>Get-Started example</b></a>: added simple example demonstrating how to setup a Continuous Integration (CI) workflow using Arm Virtual Hardware.   </li>
+</ul>
+</td></tr>
+<tr>
+<td>0.1-beta (Nov 2021) </td><td>Initial release  </td></tr>
+</table>
 <h1><a class="anchor" id="Roadmap"></a>
 Product Roadmap</h1>
-<p >Arm Virtual Hardware is now in public beta phase. The table below shows features that we will deploy in the <b>next 6 months</b>. During the beta phase, you may evaluate how our products help in your development processes. The feature roadmap of Arm Virtual Hardware gives you indication what to expect. We will release this features as they become available during the beta phase to allow product evaluation before the final release.</p>
+<p >Arm Virtual Hardware is now in public beta phase. The table below shows features that we will deploy in the <b>next 3 months</b>. During the beta phase, you may evaluate how our products help in your development processes. The feature roadmap of Arm Virtual Hardware gives you indication what to expect. We will release this features as they become available during the beta phase to allow product evaluation before the final release.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Feature   </th><th class="markdownTableHeadLeft">Description    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><b>VSocket Interface</b>   </td><td class="markdownTableBodyLeft">BSD socket interface that connects the application under test to networks, including public Internet.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><b>VIO Interface</b>   </td><td class="markdownTableBodyLeft">Simple interface to control I/O such as switches and LEDs via Python scripts.    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><b>Support in MDK-Professional</b>   </td><td class="markdownTableBodyLeft">Desktop development will be enabled in classic tooling, with priority on MDK. This complements our CI Cloud service that is already deployed.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><b>Extended Target support</b>   </td><td class="markdownTableBodyLeft">The Corstone-300 model is a Cortex-M55/Ethos-U55 simulation that allows to develop a wide range of applications. Support will be extended to many other Cortex-M processors.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><b>Event Recorder CLI Tools</b>   </td><td class="markdownTableBodyLeft">Event Recorder is currently supported in MDK. This support will be extended to off-line and command line tools.    </td></tr>
 <tr class="markdownTableRowEven">
@@ -192,12 +205,12 @@ Product Roadmap</h1>
 <h1><a class="anchor" id="Issues"></a>
 Known Limitations</h1>
 <p >The current beta version of of Arm Virtual Hardware has the following known issues:</p>
-<p ><a href="../../simulation/html/group__arm__vsi.html"><b>VSI Interface</b></a></p><ul>
-<li>With TrustZone enabled, the DMA of the Cortex-M55 processor does not work in Secure mode in the address ranges of the TCM aliases (0x10000000 ITCM and 0x3000000 DTCM).</li>
+<p ><a href="../../simulation/html/group__arm__cmvp.html"><b>Virtual Peripherals</b></a>:</p><ul>
+<li>After processor reset virtual interfaces may not work correctly. So it is required to restart the debug/run session.</li>
 </ul>
 <h1><a class="anchor" id="Support"></a>
 Feedback and Support</h1>
-<p >The Arm Virtual Hardware is supported during public beta via this <a href="https://community.arm.com/support-forums/f/arm-virtual-hardware-targets-forum">Arm forum</a>. Your feedback will influence our future roadmap and we try to help you promptly with your questions. </p>
+<p >Arm Virtual Hardware is supported during public beta via this <a href="https://community.arm.com/support-forums/f/arm-virtual-hardware-targets-forum">Arm forum</a>. Your feedback will influence our future roadmap and we try to help you promptly with your questions. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -205,7 +218,7 @@ Feedback and Support</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-	Copyright &copy; 2021 Arm Limited (or its affiliates). All rights reserved.
+	Copyright &copy; 2021-2022 Arm Limited (or its affiliates). All rights reserved.
 	<!-- Use script below for auto-inserting date, project name, version, etc  -->
 	<!-- <script type="text/javascript">
         writeFooter.call(this);

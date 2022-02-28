@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Simulation", "index.html", [
-    [ "Arm Virtual Hardware Targets", "index.html", [
+    [ "Virtual Hardware Targets", "index.html", [
       [ "Virtual Interfaces", "index.html#Virtual_Interfaces", null ],
       [ "Physical Hardware", "index.html#Physical_Hardware", null ],
       [ "Development Workflow", "index.html#Development_Workflow", null ],
@@ -41,7 +41,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Using.html"
+"Using.html",
+"index.html#Physical_Hardware"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

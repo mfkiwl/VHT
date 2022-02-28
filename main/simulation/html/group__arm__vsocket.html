@@ -1,11 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- HTML header for doxygen 1.9.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Virtual Socket Interface (VSocket)</title>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Simulation: Virtual Socket Interface (VSocket)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="extra_stylesheet.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
@@ -22,6 +23,8 @@
   $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
+<link href="$extra_stylesheet" rel="stylesheet" type="text/css" />
+<link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -29,13 +32,14 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 55px;">
-  <td style="padding: 1em;"id="projectlogo"><img alt="Logo" src="arm.png"/></td>
+  <td id="projectlogo" style="padding: 1em;"><img alt="Logo" src="arm.png"/></td>
   <td style="padding-left: 2em; padding-bottom: 1em;padding-top: 1em;">
    <div id="projectname">Virtual Hardware
    &#160;<span id="projectnumber">Version 0.2 - beta</span>
    </div>
    <div id="projectbrief">Simulation Models with Virtual Interfaces for Test Automation</div>
   </td>
+  <!--END !PROJECT_NAME-->
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.svg"
@@ -103,21 +107,47 @@ $(document).ready(function(){initNavTree('group__arm__vsocket.html',''); initRes
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Content</a>  </div>
   <div class="headertitle"><div class="title">Virtual Socket Interface (VSocket)<div class="ingroups"><a class="el" href="group__arm__cmvp.html">Virtual Peripherals</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>IP network connectivity to Host computer.  
-</p>
-<p >The <b>Virtual Socket Interface (VSocket)</b> connects the user application to <a href="https://en.wikipedia.org/wiki/Berkeley_sockets"><b>BSD sockets</b></a> on the Host computer for IP network connectivity.</p>
-<p >Its support will become available in future releases according to the <a href="../../overview/html/index.html#Roadmap">Product Roadmap</a>. </p>
+<p>IP network connectivity via host system.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
+Content</h2></td></tr>
+<tr class="memitem:group__arm__vsocket__api"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arm__vsocket__api.html">VSocket API</a></td></tr>
+<tr class="memdesc:group__arm__vsocket__api"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Socket (VSocket) API. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__arm__vsocket__cases"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arm__vsocket__cases.html">VSocket Use Cases</a></td></tr>
+<tr class="memdesc:group__arm__vsocket__cases"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using Virtual Socket Interface (VSocket) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description</h2>
+<p >IP network connectivity via host system. </p>
+<p >The <b>Virtual Socket Interface (VSocket)</b> provides IP connectivity to the user application by connecting it to <a href="https://en.wikipedia.org/wiki/Berkeley_sockets"><b>BSD sockets</b></a> on the Host system. Figure below demonstrates the concept.</p>
+<div class="image">
+<img src="vsocket_structure.png" alt=""/>
+</div>
+<p >VSocket implements a variant of the and consists of the following parts:</p>
+<p >The following files define the access to the VSocket peripheral.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">File   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="https://github.com/ARM-software/VHT/blob/main/interface/include/arm_vsocket.h">./interface/include/arm_vsocket.h</a>   </td><td class="markdownTableBodyLeft"><a class="el" href="group__arm__vsocket__api.html">VSocket API</a> header file    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="https://github.com/ARM-software/VHT/blob/main/interface/vsocket/iot_socket.c">./interface/vsocket/iot_socket.c</a>   </td><td class="markdownTableBodyLeft">Implementation of <a href="https://github.com/MDK-Packs/IoT_Socket">IoT Socket</a> variant for Arm Virtual Hardware   </td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-	Copyright &copy; 2021 Arm Limited (or its affiliates). All rights reserved.
+	Copyright &copy; 2021-2022 Arm Limited (or its affiliates). All rights reserved.
 	<!-- Use script below for auto-inserting date, project name, version, etc  -->
 	<!-- <script type="text/javascript">
         writeFooter.call(this);
